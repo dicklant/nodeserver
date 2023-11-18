@@ -1,7 +1,6 @@
 const http = require("http");
 
-const host = 'localhost';
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '80');
 
 
 function normalizePort(val) {
@@ -27,5 +26,5 @@ const requestListener = function (req, res) {
 
 const server = http.createServer(requestListener);
 server.listen(port, () => {
-    console.log(`Server is running on http://${host}:${port}`);
+    console.log(`Server is running on port:${port}`);
 });
